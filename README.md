@@ -1,13 +1,14 @@
 # Classifications-of-TE3-Sudokus<br><br>
 
- ## Various classifications of all the known Sudoku puzzles at depth 3 of the universal Trial-and-Error procedure (as of July 13th, 2023)<br><br>
+## Various classifications of all the known Sudoku puzzles at depth 3 of the universal Trial-and-Error procedure (as of July 13th, 2023)<br><br>
 
-WARNING: THIS IS ONLY A PREVIEW OF WHAT'S COMING
 
 <br><br>
 
 ## 1. Background
 This repository relies on many concepts introduced in the publications listed at the end of this README file. The purpose of this file is not to summarise them.<br>
+In particular, you need to read the last two chapters of reference [UMRN] for any details about the approach leading to the files in this repository.<br>
+
 Note that the results appearing in the various files described in section 3 were done with the CSP-Rules software (https://github.com/denis-berthier/CSP-Rules-V2.1) and involved thousands of hours of processor time.
 
 <br><br>
@@ -37,20 +38,20 @@ The guardians allow to conclude that there is an OR relation that must be satisf
 This repository is about the types of OR-relations and OR-chains introduced in references [AUM] or [UMRN], along the same lines as chains (such as whips, g-whips...) introduced in my previous publications - more specifically, it is about the fine classification results thus obtained.<br>
 
 ### More impossible patterns
-After some time, "eleven" found more 3-digit impossible patterns, indeed 630 of them in two bands (or two stacks). They were originally made available here: xxxx. <br>
-I then wrote a rule generator that could transform each pattern into a rule that asserts a corresponding OR-relation.<br>
+After some time, "eleven" found more 3-digit impossible patterns, indeed 630 of them in two bands (or two stacks). They were originally announced here: http://forum.enjoysudoku.com/chromatic-patterns-t39885-71.html. <br>
+As I wanted to see if and how such a large number of patterns could be used in practice, I wrote a rule generator that could transform each pattern into a rule that asserts a corresponding OR-relation.<br>
 By analysing how useful such rules were when combined with OR-chains, I found 4 small subsets of patterns that had almost the same resolution power as the full set of 630: Select1, Select2,...<br>
 
 
 <br><br>
 ## 3. What is there in this repository?
 All the files mentioned below have 158,276 lines and have Unix line endings. (You may have to change the line endings if you are using Windows.)<br>
-The puzzles.txt file contains mith's 158,276 min-expand puzzles in T&E(3), the original version of which can be found here: xxxx.<br>
+The "puzzles.txt" file contains mith's 158,276 min-expand puzzles in T&E(3), the original version of which was announced here: http://forum.enjoysudoku.com/post328587.html?hilit=expand#p328587.<br>
 The other files contain the classifications of these puzzles wrt to the corresponding sets of resolution rules:
-* Trid-OR5W-levels.clp contains  the classifications wrt SFin + W + Trid-OR5W, 
-* Select1-OR5W-levels.clp contains  the classifications wrt SFin + W + (Trid+Select1)-OR5W, 
-* Select2-OR5W-levels.clp contains  the classifications wrt SFin + W + Trid+Select2)-OR5W, 
-* Imp630-OR5W-levels.clp contains  the classifications wrt SFin + W + (Trid+Imp630--OR5W.<br>
+* "Trid-OR5W-levels.txt" contains  the classifications wrt SFin + W + Trid-OR5W, 
+* "Select1-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Select1)-OR5W, 
+* "Select2-OR5W-levels.txt" contains  the classifications wrt SFin + W + Trid+Select2)-OR5W, 
+* "Imp630-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Imp630--OR5W.<br>
 
 Details about the meaning of all this can be found in the last two chapters of[UMRN].
 
@@ -93,4 +94,5 @@ All this means that any mention of them must be accompanied by the proper refere
 * [PBCS3]: BERTHIER D., Pattern-Based Constraint Satisfaction and Logic Puzzles (Third Edition), Lulu Press, November 2021.<br>
 * [PBCS]: any of [PBCS1], [PBCS2] or [PBCS3].<br>
 * [UMRN]: BERTHIER D., User Manual and Research Notebooks for CSP-Rules, Lulu Press, July 2023.<br><br>
+
 
