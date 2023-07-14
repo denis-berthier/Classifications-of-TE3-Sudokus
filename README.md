@@ -1,16 +1,13 @@
 # Classifications-of-TE3-Sudokus<br><br>
 
 ## Various classifications of all the known Sudoku puzzles at depth 3 of the universal Trial-and-Error procedure (as of July 13th, 2023)<br><br>
-
-
 <br><br>
 
 ## 1. Background
 This repository relies on many concepts introduced in the publications listed at the end of this README file. The purpose of this file is not to summarise them.<br>
 In particular, you need to read the last two chapters of reference [UMRN] for any details about the approach leading to the files in this repository.<br>
 
-Note that the results appearing in the various files described in section 3 were done with the CSP-Rules software (https://github.com/denis-berthier/CSP-Rules-V2.1) and involved thousands of hours of processor time.
-
+Note that the results appearing in the various files described in section 3 were done with the CSP-Rules software (https://github.com/denis-berthier/CSP-Rules-V2.1) and involved thousands of hours of processor time.<br>
 <br><br>
 
 
@@ -41,9 +38,8 @@ This repository is about the types of OR-relations and OR-chains introduced in r
 After some time, "eleven" found more 3-digit impossible patterns, indeed 630 of them in two bands (or two stacks). They were originally announced here: http://forum.enjoysudoku.com/chromatic-patterns-t39885-71.html. <br>
 As I wanted to see if and how such a large number of patterns could be used in practice, I wrote a rule generator that could transform each pattern into a rule that asserts a corresponding OR-relation.<br>
 By analysing how useful such rules were when combined with OR-chains, I found 4 small subsets of patterns that had almost the same resolution power as the full set of 630: Select1, Select2,...<br>
-
-
 <br><br>
+
 ## 3. What is there in this repository?
 All the files mentioned below have 158,276 lines and have Unix line endings. (You may have to change the line endings if you are using Windows.)<br>
 The "puzzles.txt" file contains mith's 158,276 min-expand puzzles in T&E(3), the original version of which was announced here: http://forum.enjoysudoku.com/post328587.html?hilit=expand#p328587.<br>
@@ -51,18 +47,20 @@ The other files contain the classifications of these puzzles wrt to the correspo
 * "Trid-OR5W-levels.txt" contains  the classifications wrt SFin + W + Trid-OR5W, 
 * "Select1-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Select1)-OR5W, 
 * "Select2-OR5W-levels.txt" contains  the classifications wrt SFin + W + Trid+Select2)-OR5W, 
-* "Imp630-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Imp630--OR5W.<br>
+* "Imp630-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Imp630)-OR5W.<br>
 
-Details about the meaning of all this can be found in the last two chapters of[UMRN].
-
-
+An additional file "Trid-OR5gW-levels.txt" contains  the classifications of only the first 10,000 puzzles wrt SFin + gW + Trid-OR5gW.<br>
+Comparison of ratings in the above files can be done within SudoRules, using function "
+Details about the meaning of all this can be found in the last two chapters of [UMRN].<br>
 <br><br>
 
 
-
 ## 4. How to use the above classification results to find more interesting examples?
-
-
+There are many ways you can use the above results to find interesting examples of puzzles in T&E(3) and/or of impossible patterns. The following are just examples:<br>
+* select puzzles solvable using only the most basic T&E(3) pattern, i.e. Tridagons, according to their SFin + W + Trid-OR5W level,
+* select puzzles solvable using only Tridagons, but for which ORk-gchains are useful, by choosing those that have a Trid-OR5gW-level lower than their Trid-OR5W-level,
+* select puzzles solvable in one of the Select subsets of impossible patterns, but not in the the next smaller one, by comparing their different levels,
+* select puzzles requiring very rare impossible patterns by choosing those with their Imp630-OR5W-level lower than their Select2-OR5W-level...<br>
 <br><br>
 
 
@@ -71,7 +69,7 @@ Strictly speaking, there is no software in this repository.<br>
 Puzzles remain the intellectual property of "mith".<br>
 The 630 impossible patterns remain the intellectual property of "eleven".<br>
 Puzzle solutions and classifications are my intellectual property.<br>
-All this means that any mention of them must be accompanied by the proper references.<br>
+All this means that any mention of the above should be accompanied by the proper references.<br>
 <br><br>
 
 ## 6. References<br>
@@ -81,7 +79,7 @@ All this means that any mention of them must be accompanied by the proper refere
 * [Berthier 2008b]: BERTHIER D., From Constraints to Resolution Rules, Part II: chains, braids, confluence and T&E, International Joint Conferences on Computer, Information, Systems Sciences and Engineering (CISSE 08), December 5-13, 2008, Springer. Published as a chapter of Advanced Techniques in Computing Sciences and Software Engineering, Khaled Elleithy Editor, pp. 171-176, Springer, 2010.<br>
 * [Berthier 2009]: BERTHIER D., Unbiased Statistics of a CSP - A Controlled-Bias Generator, International Joint Conferences on Computer, Information, Systems Sciences and Engineering (CISSE 09), December 4-12, 2009, Springer. Published as a chapter of Innovations in Computing Sciences and Software Engineering, Khaled Elleithy Editor, pp. 11-17, Springer, 2010.<br><br>
 
-### Books<br>
+### Books <br>
 * [AUM]: BERTHIER D., Augmented User Manual for CSP-Rules V2.1, Lulu Press, November 2021.<br>
 * [BUM1]: BERTHIER D., Basic User Manual for CSP-Rules V2.1, Lulu Press, August 2020.<br>
 * [BUM2]: BERTHIER D., Basic User Manual for CSP-Rules V2.1 (Second Edition), Lulu Press, November 2021.<br>
