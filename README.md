@@ -50,13 +50,13 @@ The other files contain the classifications of these puzzles wrt to the correspo
 * "Imp630-OR5W-levels.txt" contains  the classifications wrt SFin + W + (Trid+Imp630)-OR5W.<br>
 
 An additional file "Trid-OR5gW-levels.txt" contains  the classifications of only the first 10,000 puzzles wrt SFin + gW + Trid-OR5gW.<br>
-Comparison of ratings in the above files can be done within SudoRules, using function "
+Comparison of ratings in the above files can be done within SudoRules, using function "compare-level-files".<br>
 Details about the meaning of all this can be found in the last two chapters of [UMRN].<br>
 <br><br>
 
 
 ## 4. How to use the above classification results to find more interesting examples?
-There are many ways you can use the above results to find interesting examples of puzzles in T&E(3) and/or of impossible patterns. The following are just examples:<br>
+There are many ways you can use the above results to find interesting examples of puzzles in T&E(3) and/or of impossible patterns. The following are just examples (in which you can use SudoRules function "compare-level-files" to find the differences):<br>
 * select puzzles solvable using only the most basic T&E(3) pattern, i.e. Tridagons, according to their SFin + W + Trid-OR5W level,
 * select puzzles solvable using only Tridagons, but for which ORk-gchains are useful, by choosing those that have a Trid-OR5gW-level lower than their Trid-OR5W-level,
 * select puzzles solvable in one of the Select subsets of impossible patterns, but not in the the next smaller one, by comparing their different levels,
