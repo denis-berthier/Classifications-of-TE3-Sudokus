@@ -22,7 +22,7 @@ I shall also consider only the 9x9 Sudoku CSP and "puzzle" will mean "9x9 Sudoku
 Until March 2022, all the known puzzles were in T&E(0, 1 or 2) [and even, for those strictly in T&E(2), in the smaller part of it dentified in the referenced publications as B7B].<br>
 Notice that puzzles in T&E(2) are known to be extremely rare wrt puzzles in T&E(1) and puzzles in T&E(3) are probably extremely rare wrt puzzles in T&E(2).
 
-But in March 2022, while the search for the "hardest" puzzles had been running almost since the first days of Sudoku, mith" (a famous creator of Sudoku puzzles), found a remarkable 3-digit impossible pattern (tridagon) and a puzzle (Loki) that had it: http://forum.enjoysudoku.com/post317749.html?hilit=loki#p317749. Loki was a very rare thing, the 10th puzzle to have SER rating 11.9 - the highest rating for a puzzle at that time.<br>
+But in March 2022, while the search for the "hardest" puzzles had been running almost since the first days of Sudoku, mith (= Philip Newman), a famous creator of Sudoku puzzles, found a remarkable 3-digit impossible pattern (tridagon) and a puzzle (Loki) that had it: http://forum.enjoysudoku.com/post317749.html?hilit=loki#p317749. Loki was a very rare thing, the 10th puzzle to have SER rating 11.9 - the highest rating for a puzzle at that time.<br>
 
 Soon after that, I noticed that Loki was not in T&E(2) and I suggested a new way to look for the "potentially hardest" puzzles (http://forum.enjoysudoku.com/the-hardest-sudokus-new-thread-t6539-1048.html): use the T&E-depth instead of  the previously used SER (Sudoku Explainer Rating) as a measure of "hardness".<br>
 
